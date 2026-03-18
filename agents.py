@@ -2,9 +2,12 @@ import os
 from langchain_groq import ChatGroq
 from tools import search_web
 
+# Read API key from environment
+groq_key = os.getenv("GROQ_API_KEY")
+
 llm = ChatGroq(
     model="llama3-8b-8192",
-    groq_api_key=os.environ["GROQ_API_KEY"],
+    groq_api_key=groq_key,
     temperature=0.3
 )
 
