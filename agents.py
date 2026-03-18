@@ -6,7 +6,7 @@ from tools import search_web
 groq_key = os.getenv("GROQ_API_KEY")
 
 llm = ChatGroq(
-    model="llama3-8b-8192",
+    model="llama-3.1-8b-instant",
     groq_api_key=groq_key,
     temperature=0.3
 )
