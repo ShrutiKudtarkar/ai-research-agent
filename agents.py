@@ -1,8 +1,8 @@
-from langchain_community.chat_models import ChatOllama
+from langchain_groq import ChatGroq
 from tools import search_web
 
-llm = ChatOllama(
-    model="mistral",
+llm = ChatGroq(
+    model="llama3-8b-8192",
     temperature=0.3
 )
 
