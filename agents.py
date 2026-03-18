@@ -1,8 +1,10 @@
+import os
 from langchain_groq import ChatGroq
 from tools import search_web
 
 llm = ChatGroq(
     model="llama3-8b-8192",
+    groq_api_key=os.environ["GROQ_API_KEY"],
     temperature=0.3
 )
 
